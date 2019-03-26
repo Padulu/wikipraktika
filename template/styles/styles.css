@@ -1,3 +1,15 @@
+/* color variables */
+:root {
+	--color-gray: #F6F6F6;
+	--color-blue: #0060A0;
+	--color-light-blue: #DBE6EF;
+
+
+	--color-radio-button: #F07848;
+	--color-border-gray: #E1E1E1;
+}
+
+
 /* reset */
 *  {
 	-webkit-box-sizing: border-box;
@@ -8,13 +20,75 @@
 	padding: 0;
 }
 
+
 /* document */
 body {
 	font-size: 1rem;
 	font-family: "URW Gothic L", "Helvetica", "Arial", sans-serif;
+	margin: 3%; /*site-wide margin*/
 }
 
+/* header */
+header {
+	position: relative;
+}
 
+.header_container {
+	background:#0060A0;
+
+}
+
+#header_title {
+	font-size: 2.5rem;
+	font-style: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	padding: 0.2em;
+	padding-left: 2.3em;
+
+}
+
+#header_logo{
+	width: 5em;
+	height: 5em;
+	position: absolute;;
+	top: 20%;
+	left: 1%;
+}
+
+/* nav */
+nav{
+	margin-top: 40px;
+}
+
+nav section{
+	border: 1px solid blue;
+	background-color: #F6F6F6;
+	padding: 1%;
+}
+
+.lang::before {
+	content: "";
+	display:inline-block;
+	height:0.8em;
+	width: 1em;
+	background-size: 1em 0.8em;
+	background-repeat: no-repeat;
+	margin-right: 0.2em;
+	text-align: center;
+	vertical-align: middle;
+}
+#lang-it::before {
+	background-image: url(../../media/flag-it.svg);
+}
+
+#lang-fr::before {
+	background-image: url(../../media/flag-fr.svg);
+}
+
+#lang-en::before {
+	background-image: url(../../media/flag-en.svg);
+}
 
 /* images */
 
@@ -22,10 +96,22 @@ body {
 
 /* text */
 
+h1{
+	margin-left: 1%;
+	margin-bottom: 2%;
+}
+
+a{
+	color: #0060A0;
+}
+
 
 
 /* lists */
-
+li {
+	margin-left: 1em;
+	list-style: none;
+}
 
 
 /* table */
@@ -33,8 +119,6 @@ body {
 
 
 /* forms */
-
-
 
 #font-size-form {
 	float: right;
@@ -44,4 +128,6 @@ body {
 	vertical-align: middle;
 	padding: 0; margin: 0;
 }
+
+/* nav classes */
 
