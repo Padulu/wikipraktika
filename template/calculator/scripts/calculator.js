@@ -8,26 +8,27 @@ class Calculator {
     }
 
     getResult() {
-        // if(this.firstNumber != '' && this.secondNumber == '') {
-        //     let result = this.firstNumber;
-        //     this.clear();
-        //     return result;
-        // }
         let result = this.calculate(parseFloat(this.firstNumber), parseFloat(this.secondNumber), this.operator);
         this.clear();
         return result;
     }
 
     calculate(first, second, op) {
+        let result = 0;
         if(isNaN(first) == false && isNaN(second)) {
             return first;
         }
         switch(op) {
-            case '+': return first + second;
-            case '-': return first - second;
-            case '/': return first / second;
-            case '*': return first * second;
-            default: return false;
+            case '+': result = first + second; break;
+            case '-': result = first - second; break;
+            case '/': result = first / second; break;
+            case '*': result = first * second; break;
+            default: result = false;
+        }
+        if(isNaN(result) == true) {
+            return false;
+        } else {
+            return result;
         }
     }
 
@@ -62,6 +63,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const calculator = new Calculator();
     let input = document.getElementById('input');
     let output = document.getElementById('output');
+    output.innerHTML = 'Welcome';
 
     let elements = document.getElementsByClassName('number');
     for(let i=0; i < elements.length; i++) {
@@ -71,6 +73,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 output.innerHTML = calculator.firstNumber + ' ' + calculator.operator;
                 input.innerHTML = calculator.secondNumber;
             } else {
+                output.innerHTML = '';
                 calculator.setFirstNumber(e.target.value);
                 input.innerHTML = calculator.firstNumber;
             }
@@ -110,7 +113,7 @@ window.addEventListener('DOMContentLoaded', () => {
  * Tests Scenarios
  */
 const testCalc = new Calculator();
-console.log(""/*TODO*/, "should be", 17);
-console.log(""/*TODO*/, "should be", 15);
-console.log(""/*TODO*/, "should be", 30);
-console.log(""/*TODO*/, "should be", false); // true = hasError (changed to false, because true as an error is misleading)
+console.log(testCalc.calculate(9, 8, '+'), "should be", 17);
+console.log(testCalc.calculate(20, 5, '-'), "should be", 15);
+console.log(testCalc.calculate(90, 3, '/'), "should be", 30);
+console.log(testCalc.calculate(12, 4, ''), "should be", false); // true = hasError (changed to false, because true as an error is misleading)
