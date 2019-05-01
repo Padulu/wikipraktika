@@ -136,7 +136,7 @@
 					<section>
 						<h3>Demonstration</h3>
 						<hr>
-						<iframe></iframe>
+						<iframe src="./calculator/index.html"></iframe>
 						<small class="media_descriptor">Casino Mini von 1972</small>
 					</section>
 				</li>
@@ -309,7 +309,38 @@
 					<section>
 						<h3>Neuen Autor registrieren</h3>
 						<hr>
-						<!--Kublix Part Formular-->
+						<form>
+							<fieldset>
+								<legend>Autor</legend>
+								<input type="radio" name="anrede" value="Herr">Herr
+								<input type="radio" name="anrede" value="Frau">Frau
+								<label>Name</label>
+								<input type="text"/>
+								<label>E-Mail</label>
+								<input type="text"/>
+								<label>Website</label>
+								<input type="text"/>
+								<label>Geburtsdatum</label>
+								<input type="text"/>
+								<label>Nationalität</label>
+								<select>
+									<option value="">--Wählen--</option>
+									<option value="CH">Schweiz</option>
+								</select>
+								<label>Profiltext</label>
+								<textarea></textarea>
+								<label>Profilbilder</label>
+								<input type="file" name="profile-picture">
+							</fieldset>
+							<fieldset>
+								<legend>Rechtliches</legend>
+								<input type="checkbox" name="urheber-text"> Ich bestätige, das ich der Urheber des Textes bin
+								<input type="checkbox" name="urheber-bild"> Ich bestätige, das ich der Urheber aller eingereichter Bilder bin
+								<input type="checkbox" name="wahrheit"> Ich bestätige, das der Text nach bestem Treu und glauben der Wahrheit entspricht und die Bilder nicht manipuliert wurden
+							</fieldset>
+							<input type="submit" value="Account anlegen">
+							<button>Eingaben zurücksetzen</button>
+						</form>
 					</section>
 				</li>
 			</ol>				
