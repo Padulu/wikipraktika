@@ -27,11 +27,7 @@ class Calculator {
             case '*': result = first * second; break;
             default: result = false;
         }
-<<<<<<< HEAD
-        if(isNaN(result) == true) {
-=======
         if(isNaN(result) == true || !isFinite(result)) {
->>>>>>> 1046a7fa820f67b78aaec52aded5d5f6f84934c1
             return false;
         } else {
             return result;
@@ -71,32 +67,6 @@ window.addEventListener('DOMContentLoaded', () => {
     let output = document.getElementById('output');
     output.innerHTML = 'Welcome';
 
-<<<<<<< HEAD
-    let elements = document.getElementsByClassName('number');
-    for(let i=0; i < elements.length; i++) {
-        elements[i].addEventListener('click', (e) => {
-            if(calculator.operatorSet()) {
-                calculator.setSecondNumber(e.target.value);
-                output.innerHTML = calculator.firstNumber + ' ' + calculator.operator;
-                input.innerHTML = calculator.secondNumber;
-            } else {
-                output.innerHTML = '';
-                calculator.setFirstNumber(e.target.value);
-                input.innerHTML = calculator.firstNumber;
-            }
-        });
-    }
-
-    let operators = document.getElementsByClassName('operator');
-    for(let i=0; i < operators.length; i++) {
-        operators[i].addEventListener('click', (e) => {
-            calculator.operator = e.target.value;
-            input.innerHTML = '';
-            output.innerHTML = calculator.firstNumber + ' ' + e.target.value;
-        });
-    }
-
-=======
     let addNumber = (e) => {
         if(calculator.operatorSet()) {
             calculator.setSecondNumber(e.target.value);
@@ -123,7 +93,6 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 
->>>>>>> 1046a7fa820f67b78aaec52aded5d5f6f84934c1
     document.getElementById('key-c').addEventListener('click', () => {
         calculator.clear();
         output.innerHTML = '';
