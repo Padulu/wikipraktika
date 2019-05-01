@@ -176,6 +176,12 @@ small, figcaption {
 	padding: 0; margin: 0;
 }
 
+/* calculator iframe */
+iframe {
+	width: 40rem;
+	height: 45rem;
+}
+
 /* tables */
 
 table {
