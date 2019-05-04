@@ -177,6 +177,40 @@ small, figcaption {
 	padding: 0; margin: 0;
 }
 
+form fieldset * {
+	display: block;
+}
+
+form fieldset {
+	padding: .5rem;
+	border-radius: 3px;
+	border: 1px #808080d1 solid;
+}
+
+form input[type="text"],
+form textarea {
+	background: #F6F6F6;
+	border: none;
+	border-bottom: 1px solid black;
+	padding: 5px;
+	width: 100%;
+}
+
+form select {
+	width: 100%;
+	background: #F6F6F6;
+}
+
+form input[type="checkbox"],
+form input[type="radio"] {
+	display: inline;
+}
+
+.form-element {
+	margin-top: .6rem;
+	margin-bottom: .6rem;
+}
+
 /* calculator iframe */
 iframe {
 	width: 40rem;
