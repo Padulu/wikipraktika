@@ -1,8 +1,10 @@
+"use strict";
+
 function autocomplete(input, array) {
     /*the autocomplete function takes two arguments,
     the text field element and an array of possible autocompleted values:*/
     /*execute a function when someone writes in the text field:*/
-    input.addEventListener("input", function(e) {
+    input.addEventListener("input", function() {
         var itemContainer, item, val = this.value;
         /*close any already open lists of autocompleted values*/
         closeAllLists();
@@ -27,7 +29,7 @@ function autocomplete(input, array) {
             /*insert a input field that will hold the current array item's value:*/
             item.innerHTML += "<input type='hidden' value='" + array[i] + "'>";
             /*execute a function when someone clicks on the item value (DIV element):*/
-            item.addEventListener("click", function(e) {
+            item.addEventListener("click", function() {
                 /*insert the value for the autocomplete text field:*/
                 input.value = this.getElementsByTagName("input")[0].value;
                 /*close the list of autocompleted values,
@@ -47,7 +49,7 @@ function autocomplete(input, array) {
       }
     }
     /*execute a function when someone clicks in the document:*/
-    document.addEventListener("click", function (e) {
+    document.addEventListener("click", function () {
         closeAllLists();
     });
   }

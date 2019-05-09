@@ -145,6 +145,17 @@ ol[start] li { margin-left: 1.6em; } /* starting from 78 */
 
 a{ color: #0060A0; }
 
+a:hover {
+	color: #0060a091
+}
+
+a:active {
+	color: black;
+}
+
+a:focus {
+	color: darkorchid;
+}
 
 figure {
 	float: left;
@@ -309,6 +320,10 @@ footer p, footer address, footer small, footer a {
 }
 
 .media_descriptor  { color: #928983; }
+
+#font-slider:active {
+	background-color: #5f5a57;
+}
 
 
 /* autocomplete */

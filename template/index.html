@@ -300,7 +300,7 @@
 						<h3>Taschenrechner suchen nach Modell</h3>
 						<hr>
 						<div class="autocomplete">
-							<input id="searchField" type="text" name="q">
+							<input id="searchField" type="search" name="q">
 						</div>
 						<button class="formButton searchButton">Search</button>
 					</section>
@@ -313,7 +313,7 @@
 							<fieldset>
 								<legend>Autor</legend>
 								<span class="form-element">
-									Herr <input type="radio" name="anrede" value="Herr"><br>
+									Herr <input type="radio" name="anrede" value="Herr">
 								</span>
 								<span class="form-element">
 									Frau <input type="radio" name="anrede" value="Frau">
@@ -324,11 +324,11 @@
 								</span>
 								<span class="form-element">
 								<label>E-Mail</label>
-									<input type="text"/>
+									<input type="email"/>
 								</span>
 								<span class="form-element">
 								<label>Website</label>
-									<input type="text"/>
+									<input type="url"/>
 								</span>
 								<span class="form-element">
 								<label>Geburtsdatum</label>
@@ -341,30 +341,30 @@
 									<option value="CH">Schweiz</option>
 								</select>
 								</span>
-								<span class="form-element"></span>
+								<span class="form-element">
 									<label>Profiltext</label>
 									<textarea></textarea>
 								</span>
-								<span class="form-element"></span>
+								<span class="form-element">
 									<label>Profilbilder</label>
 									<input type="file" name="profile-picture">
 								</span>
 							</fieldset>
 							<fieldset>
 								<legend>Rechtliches</legend>
-								<span class="form-element"></span>
-									<input type="checkbox" name="urheber-text"> Ich bestätige, das ich der Urheber des Textes bin<br>
+								<span class="form-element">
+									<input type="checkbox" name="urheber-text"> Ich bestätige, das ich der Urheber des Textes bin
 								</span>
-								<span class="form-element"></span>
-									<input type="checkbox" name="urheber-bild"> Ich bestätige, das ich der Urheber aller eingereichter Bilder bin<br>
+								<span class="form-element">
+									<input type="checkbox" name="urheber-bild"> Ich bestätige, das ich der Urheber aller eingereichter Bilder bin
 								</span>
-								<span class="form-element"></span>
+								<span class="form-element">
 									<input type="checkbox" name="wahrheit"> Ich bestätige, das der Text nach bestem Treu und glauben der Wahrheit entspricht und die Bilder nicht manipuliert wurden
 								</span>
 							</fieldset>
 							<div class="form-element">
-								<input type="submit" class="formButton" value="Account anlegen">
-								<button class="formButton">Eingaben zurücksetzen</button>
+								<button type="submit" class="formButton">Account anlegen</button>
+								<button type="reset" class="formButton">Eingaben zurücksetzen</button>
 							</div>
 						</form>
 					</section>
@@ -374,7 +374,7 @@
 		</main>
 		<footer>
 			<address>Bahnhofstrasse 42, 8000 Zürich</address>
-			<a href="#">055 444 33 22</a> <a href="info@wikipraktika.com">info@wikipraktika.com</a><!--add later tel+41554443322-->
+			<a href="tel:0554443322">055 444 33 22</a> <a href="mailto:info@wikipraktika.com">info@wikipraktika.com</a><!--add later tel+41554443322-->
 			<small>Alle Inhalte von Wikipraktika stehen unter der <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="Creative Commons Icon" /><a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a> und dürfen nur mit Nennung des Autors weiterverwendet werden.</small>
 		
 		</footer>
