@@ -81,16 +81,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
     let elements = document.getElementsByClassName('number');
     for(let i=0; i < elements.length; i++) {
-        elements[i].addEventListener('click', e => addNumber(e));
+        elements[i].addEventListener('click', addNumber);
     }
+
+    let addOperators = (e) => {
+        calculator.operator = e.target.value;
+        input.innerHTML = '';
+        output.innerHTML = calculator.firstNumber + ' ' + e.target.value;
+    };
 
     let operators = document.getElementsByClassName('operator');
     for(let i=0; i < operators.length; i++) {
-        operators[i].addEventListener('click', (e) => {
-            calculator.operator = e.target.value;
-            input.innerHTML = '';
-            output.innerHTML = calculator.firstNumber + ' ' + e.target.value;
-        });
+        operators[i].addEventListener('click', addOperators);
     }
 
     document.getElementById('key-c').addEventListener('click', () => {

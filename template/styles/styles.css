@@ -97,6 +97,10 @@ nav li {
 	background-image: url(../../media/icon-search.svg);
 }
 
+.searchButton:hover {
+	color: #e0d6d0;
+}
+
 /* main sections */
 main{
 	counter-reset: item;
@@ -146,7 +150,7 @@ ol[start] li { margin-left: 1.6em; } /* starting from 78 */
 a{ color: #0060A0; }
 
 a:hover {
-	color: #0060a091
+	text-decoration: none;
 }
 
 a:active {
@@ -205,13 +209,19 @@ form fieldset {
 	border: 1px #808080d1 solid;
 }
 
-form input[type="text"],
-form textarea {
+.text-input {
 	background: #F6F6F6;
 	border: none;
-	border-bottom: 1px solid black;
+	border-bottom: 1.3px solid black;
 	padding: 5px;
 	width: 100%;
+}
+
+.text-input:focus {
+	border-bottom: 2px solid #0060A0;
+
+	color: #0060A0;
+	outline: none;
 }
 
 form select {

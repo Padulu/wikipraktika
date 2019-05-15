@@ -290,16 +290,16 @@
             <div class="autocomplete">
                 <datalist id="calculators">
                     <option value="Mexico Instrument TI 30">
-                        <option value="Mexico Instrument TI 32">
-                            <option value="Mexico Instrument D*D">
-                                <option value="Casino UX5">
-                                    <option value="Casino TZZ">
-                                        <option value="Casino Basic">
-                                            <option value="HG Calc++">
-                                                <option value="HG Productive">
-                                                    <option value="HG GO-ON">
+                    <option value="Mexico Instrument TI 32">
+                    <option value="Mexico Instrument D*D">
+                    <option value="Casino UX5">
+                    <option value="Casino TZZ">
+                    <option value="Casino Basic">
+                    <option value="HG Calc++">
+                    <option value="HG Productive">
+                    <option value="HG GO-ON">
                 </datalist>
-                <input list="calculators" class="searchField" type="search">
+                <input list="calculators" class="searchField text-input" type="search">
             </div>
             <button class="formButton searchButton">Search</button>
         </article>
@@ -311,54 +311,54 @@
                 <fieldset>
                     <legend>Autor</legend>
                     <span class="form-element">
-									Herr <input type="radio" name="anrede" value="Herr">
-								</span>
+						Herr <input type="radio" name="anrede" value="Herr">
+					</span>
                     <span class="form-element">
-									Frau <input type="radio" name="anrede" value="Frau">
-								</span>
+						Frau <input type="radio" name="anrede" value="Frau">
+					</span>
                     <span>
-								<label>Name</label>
-									<input type="text"/>
-								</span>
+					    <label>Name</label>
+						<input type="text" class="text-input" required/>
+					</span>
                     <span class="form-element">
-								<label>E-Mail</label>
-									<input type="email"/>
-								</span>
+						<label>E-Mail</label>
+						<input type="email" class="text-input" required/>
+					</span>
                     <span class="form-element">
-								<label>Website</label>
-									<input type="url"/>
-								</span>
+						<label>Website</label>
+						<input type="url" class="text-input"/>
+					</span>
                     <span class="form-element">
-								<label>Geburtsdatum</label>
-									<input type="text"/>
-								</span>
+						<label>Geburtsdatum</label>
+						<input type="text" class="text-input" required/>
+					</span>
                     <span class="form-element">
-								<label>Nationalität</label>
-								<select>
-									<option value="">--Wählen--</option>
-									<option value="CH">Schweiz</option>
-								</select>
-								</span>
+						<label>Nationalität</label>
+						<select required>
+							<option value="">--Wählen--</option>
+							<option value="CH">Schweiz</option>
+						</select>
+					</span>
                     <span class="form-element">
-									<label>Profiltext</label>
-									<textarea></textarea>
-								</span>
+						<label>Profiltext</label>
+						<textarea class="text-input"></textarea>
+					</span>
                     <span class="form-element">
-									<label>Profilbilder</label>
-									<input type="file" name="profile-picture">
-								</span>
+						<label>Profilbilder</label>
+						<input type="file" name="profile-picture">
+					</span>
                 </fieldset>
                 <fieldset>
                     <legend>Rechtliches</legend>
                     <span class="form-element">
-									<input type="checkbox" name="urheber-text"> Ich bestätige, das ich der Urheber des Textes bin
-								</span>
+						<input type="checkbox" name="urheber-text" required> Ich bestätige, das ich der Urheber des Textes bin
+					</span>
                     <span class="form-element">
-									<input type="checkbox" name="urheber-bild"> Ich bestätige, das ich der Urheber aller eingereichter Bilder bin
-								</span>
+						<input type="checkbox" name="urheber-bild" required> Ich bestätige, das ich der Urheber aller eingereichter Bilder bin
+					</span>
                     <span class="form-element">
-									<input type="checkbox" name="wahrheit"> Ich bestätige, das der Text nach bestem Treu und glauben der Wahrheit entspricht und die Bilder nicht manipuliert wurden
-								</span>
+						<input type="checkbox" name="wahrheit" required> Ich bestätige, das der Text nach bestem Treu und glauben der Wahrheit entspricht und die Bilder nicht manipuliert wurden
+					</span>
                 </fieldset>
                 <div class="form-element">
                     <button type="submit" class="formButton">Account anlegen</button>
