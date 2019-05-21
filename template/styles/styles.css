@@ -26,7 +26,7 @@
 body {
 	font-size: 0.9rem;
 	font-family: "URW Gothic L", "Helvetica", "Arial", sans-serif;
-	margin: 6em; /*site-wide margin*/
+	margin: 1em;
 }
 
 /* header */
@@ -64,6 +64,8 @@ nav{
 	border: 1px solid blue;
 	background-color: #F6F6F6;
 	padding: 0.5em;
+	position:relative;
+	margin-bottom: 2em;
 }
 
 nav li {
@@ -97,14 +99,15 @@ nav li {
 	background-image: url(../../media/icon-search.svg);
 }
 
-.searchButton:hover {
+.searchButton:hover, .formButton:focus {
 	color: #e0d6d0;
+	outline: none;
 }
 
 /* main sections */
 main{
 	counter-reset: item;
-    list-style-type: none;
+	list-style-type: none;
 }
 
 .header-number {
@@ -143,7 +146,11 @@ h3 { margin-top: 1.5em; }
 
 hr { margin-bottom: 1em; }
 
+dl { margin-bottom: 0.5em;}
+
 li { margin-left: 1em; }
+
+ol { margin: 0.5em 0em;}
 
 ol[start] li { margin-left: 1.6em; } /* starting from 78 */
 
@@ -159,6 +166,10 @@ a:active {
 
 a:focus {
 	color: darkorchid;
+}
+
+u {
+	color: black;
 }
 
 aside figure {
@@ -179,13 +190,22 @@ small, aside figcaption {
 	margin-bottom: 1em;
 }
 
-video {
-	width: 100%;
-	height: 100%;
+figcaption a:link {
+	color: #928983;
 }
 
-.youtube-vid {
-	width: calc(56.25vw - 5px);
+
+small a:link {
+	color: black;
+}
+
+video {
+	width: 100%;
+	height: calc(56.25vw - 5px);
+}
+
+iframe {
+	width: 100%;
 	height: calc(56.25vw - 5px);
 }
 
@@ -239,10 +259,10 @@ form input[type="radio"] {
 	margin-bottom: .6rem;
 }
 
-/* calculator iframe */
-iframe {
+.calculator iframe {
 	width: 40rem;
 	height: 45rem;
+
 }
 
 /* tables */
@@ -250,6 +270,10 @@ iframe {
 table {
 	width: 100%;
 	border-collapse: collapse;
+}
+
+caption {
+	padding: 0.2em;
 }
 
 .top-row {
@@ -314,11 +338,12 @@ td:first-child {
 
 /* special components */
 
-.starred_lists li{
+.starred_lists dd{
 	list-style: none;
+	margin-left: 10px;
 }
 
-.starred_lists li::before{
+.starred_lists dd::before{
 	content: "⌖ ";
 }
 .list_title_blue{
@@ -338,10 +363,12 @@ td:first-child {
 
 .media_descriptor  { color: #928983; }
 
-#font-slider:active {
-	background-color: #5f5a57;
-}
+#font-slider:active { background-color: #5f5a57; }
 
+#font-size-form {     
+	position: absolute;
+	right: 1em;
+}
 
 /* autocomplete */
 
@@ -379,4 +406,10 @@ td:first-child {
 	background-size: 1.3em 1.3em;
 	margin-right: 0.5em;
 	margin-left: 0.1em;
+}
+
+.formButton:active {
+	box-shadow: inset 0px 0px 5px 1px black;
+	border-radius: 3px;
+	outline:none;
 }
