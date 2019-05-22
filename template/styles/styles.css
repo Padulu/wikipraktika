@@ -1,16 +1,3 @@
-
-/* color variables TODO, delete at the end */
-:root {
-	--color-gray: #F6F6F6;
-	--color-blue: #0060A0;
-	--color-light-blue: #DBE6EF;
-
-
-	--color-radio-button: #F07848;
-	--color-border-gray: #E1E1E1;
-}
-
-
 /* reset */
 *  {
 	-webkit-box-sizing: border-box;
@@ -35,12 +22,12 @@ header {
 	margin-bottom: 2em;
 }
 
-.header_container {
+.header-container {
 	background:#0060A0;
 
 }
 
-#header_title {
+#header-title {
 	font-size: 2.5rem;
 	font-style: normal;
 	font-family: Arial, Helvetica, sans-serif;
@@ -50,7 +37,7 @@ header {
 
 }
 
-#header_logo{
+#header-logo{
 	width: 5em;
 	height: 5em;
 	position: absolute;;
@@ -259,6 +246,36 @@ form input[type="radio"] {
 	margin-bottom: .6rem;
 }
 
+.autocomplete {
+	display: inline-block;
+} 
+
+.formButton {
+	-webkit-box-shadow: 5px #D1C6D1;
+	-moz-box-shadow: 5px #D1C6D1;
+	box-shadow: 1px 1px 5px 2px #D1C6D1;
+	padding: 5px 10px;
+	border: none;
+	border-radius: 3px;
+	color: white;
+	background: #0060A0;
+	font-size: 1em;
+}
+
+.formButton:active {
+	box-shadow: inset 0px 0px 5px 1px black;
+	border-radius: 3px;
+	outline:none;
+}
+
+.searchButton::before {
+	height: 1.3em;
+	width: 1.3em;
+	background-size: 1.3em 1.3em;
+	margin-right: 0.5em;
+	margin-left: 0.1em;
+}
+
 .calculator iframe {
 	width: 40rem;
 	height: 45rem;
@@ -276,7 +293,7 @@ caption {
 	padding: 0.2em;
 }
 
-.top-row {
+tr:first-child {
 	border-top: 4px solid black;
 	border-bottom: 4px solid black;
 }
@@ -327,7 +344,7 @@ td:first-child {
 /* custom classes */
 
 /* section specific changes */
-.table_maths object, .table_maths img {
+.table-maths object, .table-maths img {
 	display:block;
 	margin:auto;
 }
@@ -336,7 +353,7 @@ td:first-child {
 }
 
 
-/* special components */
+/* components */
 
 .starred_lists dd{
 	list-style: none;
@@ -350,66 +367,22 @@ td:first-child {
 	color: #0060A0;
     font-weight: bold;
 } 
-.last_editor {
+.last-editor {
 	width: 100%;
 	border: 1.7px dotted black;
 	padding: 0.1em 0.2em;
 	font-style: italic;
 }
 
-.last_editor time {
-	float:right;
+.last-editor time {
+	float: right;
 }
 
-.media_descriptor  { color: #928983; }
+.media-descriptor  { color: #928983; }
 
 #font-slider:active { background-color: #5f5a57; }
 
 #font-size-form {     
 	position: absolute;
 	right: 1em;
-}
-
-/* autocomplete */
-
-.autocomplete {
-	position: relative;
-	display: inline-block;
-} 
-
-#searchField {
-	background: #F6F6F6;
-	border: none;
-	border-bottom: 1px solid black;
-	padding: 5px;
-}
-
-#searchField:focus {
-	outline: none;
-}
-
-.formButton {
-	/*-webkit-box-shadow: 5px #D1C6D1;
-	/-moz-box-shadow: 5px #D1C6D1;*/
-	box-shadow: 1px 1px 5px 2px #D1C6D1;
-	padding: 5px 10px;
-	border: none;
-	border-radius: 3px;
-	color: white;
-	background: #0060A0;
-	font-size: 1em;
-}
-
-.searchButton::before {
-	height: 1.3em;
-	width: 1.3em;
-	background-size: 1.3em 1.3em;
-	margin-right: 0.5em;
-	margin-left: 0.1em;
-}
-
-.formButton:active {
-	box-shadow: inset 0px 0px 5px 1px black;
-	border-radius: 3px;
-	outline:none;
 }
